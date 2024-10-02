@@ -1,0 +1,11 @@
+image:
+  file: Dockerfile  # Reference to your custom Dockerfile, if you have one
+
+tasks:
+  - init: |
+      echo "Initializing workspace..."
+  - command: |
+      echo "Starting YARN services..."
+      /opt/hadoop-3.3.1/sbin/start-yarn.sh
+      echo "Starting Jupyter Notebook..."
+      jupyter notebook --ip=0.0.0.0 --allow-root --no-browser
