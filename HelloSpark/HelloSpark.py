@@ -3,6 +3,7 @@ from pyspark import SparkConf
 from lib.logger import Log4j
 from lib.utils import *
 import os
+import sys
 # Define the log file directory and name
 log_directory = "/workspace/learn/app-log"  # Change to your desired path
 log_file_name = "Hello-Spark.log"
@@ -26,7 +27,10 @@ if __name__ == "__main__":
     spark.sparkContext.setLogLevel("INFO")
     logger = Log4j(spark)  # Initialise le logger
     
-    
+    if len(sys.argv) != 2:
+        # print(sys.argv)
+        logger.error("Usage: HelloSpark <filename>")
+        sys.exit(-1)
     
     # Log pour vérifier l'initialisation
     # logger.info("Log4j initialized successfully")
@@ -34,22 +38,23 @@ if __name__ == "__main__":
     # logger.info("Starting application...")
 
 
-    try:
+    # try:
 
-        logger.info("Starting HelloSpark")
-        logger.info("After starting HelloSpark")
-        conf_out = spark.sparkContext.getConf()
-
+    logger.info("Starting HelloSpark")
+    # logger.info("After starting HelloSpark")
+    # conf_out = spark.sparkContext.getConf()
+    survey_df = load_survey_df(spark,sys.argv[1])
+    survey_df.show()
         # Your processing code here
-    except Exception as e:
-        logger.error(f"An error occurred: {e}")
-        print(f"An error occurred: {e}")
+    # except Exception as e:
+    #     logger.error(f"An error occurred: {e}")
+    #     print(f"An error occurred: {e}")
 
     # Your processing code
 
 
 
-    logger.info(conf_out.toDebugString())
+    #logger.info(conf_out.toDebugString())
     logger.info("Application completed successfully")
     
     spark.stop()

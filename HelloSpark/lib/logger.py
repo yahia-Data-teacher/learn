@@ -7,7 +7,7 @@ class Log4j:
         self.app_name = conf.get("spark.app.name")
         root_class = f"{self.app_name}.logger"
         self.logger = log4j.LogManager.getLogger(root_class)
-        print(f"Log4j initialized for application: {self.app_name}")
+        #print(f"Log4j initialized for application: {self.app_name}")
 
     def warn(self, message):
         self.logger.warn(message)
