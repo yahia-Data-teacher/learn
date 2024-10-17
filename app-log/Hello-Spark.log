@@ -1,65 +1,71 @@
-24/10/16 19:49:56 DEBUG ShutdownHookManager: Adding shutdown hook
-24/10/16 19:49:56 DEBUG PythonGatewayServer: Started PythonGatewayServer on localhost/127.0.0.1 with port 39795
-24/10/16 19:49:56 INFO SparkContext: Running Spark version 3.5.3
-24/10/16 19:49:56 INFO SparkContext: OS info Linux, 6.1.91-060191-generic, amd64
-24/10/16 19:49:56 INFO SparkContext: Java version 17.0.12
-24/10/16 19:49:56 INFO ResourceUtils: ==============================================================
-24/10/16 19:49:56 INFO ResourceUtils: No custom resources configured for spark.driver.
-24/10/16 19:49:56 INFO ResourceUtils: ==============================================================
-24/10/16 19:49:56 INFO SparkContext: Submitted application: Hello Spark
-24/10/16 19:49:56 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
-24/10/16 19:49:56 INFO ResourceProfile: Limiting resource is cpu
-24/10/16 19:49:56 INFO ResourceProfileManager: Added ResourceProfile id: 0
-24/10/16 19:49:56 INFO SecurityManager: Changing view acls to: gitpod
-24/10/16 19:49:56 INFO SecurityManager: Changing modify acls to: gitpod
-24/10/16 19:49:56 INFO SecurityManager: Changing view acls groups to: 
-24/10/16 19:49:56 INFO SecurityManager: Changing modify acls groups to: 
-24/10/16 19:49:56 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: gitpod; groups with view permissions: EMPTY; users with modify permissions: gitpod; groups with modify permissions: EMPTY
-24/10/16 19:49:57 DEBUG TransportServer: Shuffle server started on 172.17.0.2 with port 36049
-24/10/16 19:49:57 INFO Utils: Successfully started service 'sparkDriver' on port 36049.
-24/10/16 19:49:57 DEBUG SparkEnv: Using serializer: class org.apache.spark.serializer.JavaSerializer
-24/10/16 19:49:57 INFO SparkEnv: Registering MapOutputTracker
-24/10/16 19:49:57 DEBUG MapOutputTrackerMasterEndpoint: init
-24/10/16 19:49:57 INFO SparkEnv: Registering BlockManagerMaster
-24/10/16 19:49:57 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
-24/10/16 19:49:57 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
-24/10/16 19:49:57 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
-24/10/16 19:49:57 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e2e5ca27-eb99-4356-8bf4-569d798f51dd
-24/10/16 19:49:57 DEBUG DiskBlockManager: Adding shutdown hook
-24/10/16 19:49:57 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
-24/10/16 19:49:57 INFO SparkEnv: Registering OutputCommitCoordinator
-24/10/16 19:49:57 DEBUG OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: init
-24/10/16 19:49:57 DEBUG SecurityManager: Created SSL options for ui: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, trustStore=None, trustStorePassword=None, protocol=None, enabledAlgorithms=Set()}
-24/10/16 19:49:57 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
-24/10/16 19:49:57 DEBUG JettyUtils: Using requestHeaderSize: 8192
-24/10/16 19:49:57 DEBUG JettyUtils: Using setSendServerVersion: false
-24/10/16 19:49:57 DEBUG JettyUtils: Using setSendXPoweredBy: false
-24/10/16 19:49:57 INFO Utils: Successfully started service 'SparkUI' on port 4040.
-24/10/16 19:49:57 INFO Executor: Starting executor ID driver on host b695161db578
-24/10/16 19:49:57 INFO Executor: OS info Linux, 6.1.91-060191-generic, amd64
-24/10/16 19:49:57 INFO Executor: Java version 17.0.12
-24/10/16 19:49:57 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
-24/10/16 19:49:57 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@16fc913d for default.
-24/10/16 19:49:57 DEBUG TransportServer: Shuffle server started on 172.17.0.2 with port 33513
-24/10/16 19:49:57 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33513.
-24/10/16 19:49:57 INFO NettyBlockTransferService: Server created on b695161db578:33513
-24/10/16 19:49:57 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
-24/10/16 19:49:57 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, b695161db578, 33513, None)
-24/10/16 19:49:57 DEBUG DefaultTopologyMapper: Got a request for b695161db578
-24/10/16 19:49:57 INFO BlockManagerMasterEndpoint: Registering block manager b695161db578:33513 with 434.4 MiB RAM, BlockManagerId(driver, b695161db578, 33513, None)
-24/10/16 19:49:57 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, b695161db578, 33513, None)
-24/10/16 19:49:57 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, b695161db578, 33513, None)
-24/10/16 19:49:57 DEBUG SparkContext: Adding shutdown hook
-24/10/16 19:49:57 INFO SparkContext: SparkContext is stopping with exitCode 0.
-24/10/16 19:49:57 INFO SparkUI: Stopped Spark web UI at http://b695161db578:4040
-24/10/16 19:49:57 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
-24/10/16 19:49:57 INFO MemoryStore: MemoryStore cleared
-24/10/16 19:49:57 INFO BlockManager: BlockManager stopped
-24/10/16 19:49:57 INFO BlockManagerMaster: BlockManagerMaster stopped
-24/10/16 19:49:57 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
-24/10/16 19:49:57 INFO SparkContext: Successfully stopped SparkContext
-24/10/16 19:49:58 DEBUG PythonGatewayServer: Exiting due to broken pipe from Python driver
-24/10/16 19:49:58 INFO ShutdownHookManager: Shutdown hook called
-24/10/16 19:49:58 INFO ShutdownHookManager: Deleting directory /tmp/spark-f4d267aa-e771-45de-83e6-e9bf88e68aa7/pyspark-61b12431-f057-4a09-8ba4-1e3b1b6f6c33
-24/10/16 19:49:58 INFO ShutdownHookManager: Deleting directory /tmp/spark-81dc74b0-4750-4125-b721-51cbeb054a2f
-24/10/16 19:49:58 INFO ShutdownHookManager: Deleting directory /tmp/spark-f4d267aa-e771-45de-83e6-e9bf88e68aa7
+24/10/17 16:35:17 DEBUG ShutdownHookManager: Adding shutdown hook
+24/10/17 16:35:17 DEBUG PythonGatewayServer: Started PythonGatewayServer on localhost/127.0.0.1 with port 40805
+24/10/17 16:35:18 INFO SparkContext: Running Spark version 3.5.3
+24/10/17 16:35:18 INFO SparkContext: OS info Linux, 6.1.91-060191-generic, amd64
+24/10/17 16:35:18 INFO SparkContext: Java version 17.0.12
+24/10/17 16:35:18 INFO ResourceUtils: ==============================================================
+24/10/17 16:35:18 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/10/17 16:35:18 INFO ResourceUtils: ==============================================================
+24/10/17 16:35:18 INFO SparkContext: Submitted application: Hello-Spark
+24/10/17 16:35:18 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/10/17 16:35:18 INFO ResourceProfile: Limiting resource is cpu
+24/10/17 16:35:18 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/10/17 16:35:18 INFO SecurityManager: Changing view acls to: gitpod
+24/10/17 16:35:18 INFO SecurityManager: Changing modify acls to: gitpod
+24/10/17 16:35:18 INFO SecurityManager: Changing view acls groups to: 
+24/10/17 16:35:18 INFO SecurityManager: Changing modify acls groups to: 
+24/10/17 16:35:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: gitpod; groups with view permissions: EMPTY; users with modify permissions: gitpod; groups with modify permissions: EMPTY
+24/10/17 16:35:18 DEBUG TransportServer: Shuffle server started on 172.17.0.2 with port 45585
+24/10/17 16:35:18 INFO Utils: Successfully started service 'sparkDriver' on port 45585.
+24/10/17 16:35:18 DEBUG SparkEnv: Using serializer: class org.apache.spark.serializer.JavaSerializer
+24/10/17 16:35:18 INFO SparkEnv: Registering MapOutputTracker
+24/10/17 16:35:18 DEBUG MapOutputTrackerMasterEndpoint: init
+24/10/17 16:35:18 INFO SparkEnv: Registering BlockManagerMaster
+24/10/17 16:35:18 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/10/17 16:35:18 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/10/17 16:35:18 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/10/17 16:35:18 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4f0a8316-a37c-487b-bc1f-be594a50e062
+24/10/17 16:35:18 DEBUG DiskBlockManager: Adding shutdown hook
+24/10/17 16:35:18 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/10/17 16:35:18 INFO SparkEnv: Registering OutputCommitCoordinator
+24/10/17 16:35:18 DEBUG OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: init
+24/10/17 16:35:18 DEBUG SecurityManager: Created SSL options for ui: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, trustStore=None, trustStorePassword=None, protocol=None, enabledAlgorithms=Set()}
+24/10/17 16:35:18 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/10/17 16:35:18 DEBUG JettyUtils: Using requestHeaderSize: 8192
+24/10/17 16:35:18 DEBUG JettyUtils: Using setSendServerVersion: false
+24/10/17 16:35:18 DEBUG JettyUtils: Using setSendXPoweredBy: false
+24/10/17 16:35:18 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/10/17 16:35:18 INFO Executor: Starting executor ID driver on host 0d0f1448d53a
+24/10/17 16:35:18 INFO Executor: OS info Linux, 6.1.91-060191-generic, amd64
+24/10/17 16:35:18 INFO Executor: Java version 17.0.12
+24/10/17 16:35:18 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/10/17 16:35:18 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@509bba43 for default.
+24/10/17 16:35:18 DEBUG TransportServer: Shuffle server started on 172.17.0.2 with port 38199
+24/10/17 16:35:18 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38199.
+24/10/17 16:35:18 INFO NettyBlockTransferService: Server created on 0d0f1448d53a:38199
+24/10/17 16:35:18 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/10/17 16:35:18 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 0d0f1448d53a, 38199, None)
+24/10/17 16:35:18 DEBUG DefaultTopologyMapper: Got a request for 0d0f1448d53a
+24/10/17 16:35:18 INFO BlockManagerMasterEndpoint: Registering block manager 0d0f1448d53a:38199 with 434.4 MiB RAM, BlockManagerId(driver, 0d0f1448d53a, 38199, None)
+24/10/17 16:35:18 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 0d0f1448d53a, 38199, None)
+24/10/17 16:35:18 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 0d0f1448d53a, 38199, None)
+24/10/17 16:35:19 DEBUG SparkContext: Adding shutdown hook
+24/10/17 16:35:19 INFO logger: Starting HelloSpark
+24/10/17 16:35:19 INFO logger: Before starting HelloSpark
+24/10/17 16:35:19 INFO logger: Starting HelloSpark
+24/10/17 16:35:19 INFO logger: After starting HelloSpark
+24/10/17 16:35:19 INFO logger: Application completed successfully
+24/10/17 16:35:19 INFO SparkContext: SparkContext is stopping with exitCode 0.
+24/10/17 16:35:19 INFO AbstractConnector: Stopped Spark@777a0342{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+24/10/17 16:35:19 INFO SparkUI: Stopped Spark web UI at http://0d0f1448d53a:4040
+24/10/17 16:35:19 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+24/10/17 16:35:19 INFO MemoryStore: MemoryStore cleared
+24/10/17 16:35:19 INFO BlockManager: BlockManager stopped
+24/10/17 16:35:19 INFO BlockManagerMaster: BlockManagerMaster stopped
+24/10/17 16:35:19 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+24/10/17 16:35:19 INFO SparkContext: Successfully stopped SparkContext
+24/10/17 16:35:19 DEBUG PythonGatewayServer: Exiting due to broken pipe from Python driver
+24/10/17 16:35:19 INFO ShutdownHookManager: Shutdown hook called
+24/10/17 16:35:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-25a6c8f4-759b-48cc-814b-ff9f3ce50282
+24/10/17 16:35:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-5edf2603-1ef9-4128-b4b8-4f04e52ce571/pyspark-a7b5a12c-6fca-48bf-8893-53ddd92eac8b
+24/10/17 16:35:19 INFO ShutdownHookManager: Deleting directory /tmp/spark-5edf2603-1ef9-4128-b4b8-4f04e52ce571
