@@ -1,0 +1,15 @@
+{
+    "name": "Hadoop Development Environment",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+      "--privileged"
+    ],
+    "postCreateCommand": "./start-hadoop.sh",
+    "forwardPorts": [
+      8088, 9870
+    ],
+    "remoteUser": "root"
+  }
+  

@@ -30,7 +30,7 @@ RUN wget -q https://archive.apache.org/dist/spark/spark-${SPARK_VERSION}/spark-$
 ENV HADOOP_HOME=/opt/hadoop-${HADOOP_VERSION}
 ENV SPARK_HOME=/opt/spark-${SPARK_VERSION}-bin-hadoop3
 ENV PATH=$PATH:$SPARK_HOME/bin:$HADOOP_HOME/bin
-#ENV LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH=$HADOOP_HOME/lib/native:$LD_LIBRARY_PATH
 
 
 # Install PySpark and Jupyter
