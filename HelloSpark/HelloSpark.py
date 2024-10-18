@@ -44,8 +44,12 @@ if __name__ == "__main__":
     # logger.info("After starting HelloSpark")
     # conf_out = spark.sparkContext.getConf()
     survey_df = load_survey_df(spark,sys.argv[1])
-    survey_df.show()
-        # Your processing code here
+    partitioned_survey_df = survey_df.repartition(2)
+    count_df = count_by_country(partitioned_survey_df)
+    logger.info(count_df.collect())
+
+    input('press Enter')
+           # Your processing code here
     # except Exception as e:
     #     logger.error(f"An error occurred: {e}")
     #     print(f"An error occurred: {e}")
@@ -57,7 +61,7 @@ if __name__ == "__main__":
     #logger.info(conf_out.toDebugString())
     logger.info("Application completed successfully")
     
+    # spark.stop()
     spark.stop()
-    #spark.stop()
 
     
